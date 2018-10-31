@@ -302,7 +302,7 @@
             this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX7.DisabledBackColor = System.Drawing.Color.White;
             this.textBoxX7.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX7.Location = new System.Drawing.Point(789, 613);
+            this.textBoxX7.Location = new System.Drawing.Point(789, 614);
             this.textBoxX7.Name = "textBoxX7";
             this.textBoxX7.PreventEnterBeep = true;
             this.textBoxX7.ReadOnly = true;
@@ -319,7 +319,7 @@
             this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX8.DisabledBackColor = System.Drawing.Color.White;
             this.textBoxX8.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX8.Location = new System.Drawing.Point(686, 613);
+            this.textBoxX8.Location = new System.Drawing.Point(686, 614);
             this.textBoxX8.Name = "textBoxX8";
             this.textBoxX8.PreventEnterBeep = true;
             this.textBoxX8.ReadOnly = true;
@@ -329,7 +329,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(629, 620);
+            this.label9.Location = new System.Drawing.Point(629, 621);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 19;
