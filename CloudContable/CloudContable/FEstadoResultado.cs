@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace CloudContable
 {
-    public partial class RegistrarAsiento : UserControl
+    public partial class FEstadoResultado : UserControl
     {
-        public RegistrarAsiento()
+        public FEstadoResultado()
         {
             InitializeComponent();
         }

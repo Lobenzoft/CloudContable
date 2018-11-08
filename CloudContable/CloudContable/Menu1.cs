@@ -18,8 +18,50 @@ namespace CloudContable
 
         private void ComprobanteB_Click(object sender, EventArgs e)
         {
-            RegistrarAsiento registrarasiento = new RegistrarAsiento();
+            FRegistrarAsiento registrarasiento = new FRegistrarAsiento();
             CloudContable.CargarC(registrarasiento);
+        }
+
+        private void LDiarioB_Click(object sender, EventArgs e)
+        {
+            FLibroDiario libroDiario = new FLibroDiario();
+            CloudContable.CargarC(libroDiario);
+        }
+
+        private void LMayorB_Click(object sender, EventArgs e)
+        {
+            FLibroMayor libroMayor = new FLibroMayor();
+            CloudContable.CargarC(libroMayor);
+        }
+
+        private void SSaldosB_Click(object sender, EventArgs e)
+        {
+            FSumasSaldos fsumasSaldos = new FSumasSaldos();
+            CloudContable.CargarC(fsumasSaldos);
+        }
+
+        private void EResultadoB_Click(object sender, EventArgs e)
+        {
+            FEstadoResultado festadoResultado = new FEstadoResultado();
+            CloudContable.CargarC(festadoResultado);
+        }
+
+        private void buttonX6_Click(object sender, EventArgs e)
+        {
+            FBalanceGeneral fbalanceGeneral = new FBalanceGeneral();
+            CloudContable.CargarC(fbalanceGeneral);
+        }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            FFlujoEfectivo fflujoEfectivo = new FFlujoEfectivo();
+            CloudContable.CargarC(fflujoEfectivo);
+        }
+
+        private void buttonX7_Click(object sender, EventArgs e)
+        {
+            FEvolucionPatrimonio fevolucionPatrimonio = new FEvolucionPatrimonio();
+            CloudContable.CargarC(fevolucionPatrimonio);
         }
     }
 }

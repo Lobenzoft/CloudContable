@@ -1,6 +1,6 @@
 ﻿namespace CloudContable
 {
-    partial class RegistrarAsiento
+    partial class FRegistrarAsiento
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -177,14 +177,14 @@
             this.comboBoxEx1.ItemHeight = 14;
             this.comboBoxEx1.Location = new System.Drawing.Point(400, 16);
             this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxEx1.Size = new System.Drawing.Size(158, 20);
             this.comboBoxEx1.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(400, 54);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(158, 20);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // textBoxX5
@@ -335,7 +335,7 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Totales : ";
             // 
-            // RegistrarAsiento
+            // FRegistrarAsiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,7 +360,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxX1);
-            this.Name = "RegistrarAsiento";
+            this.Name = "FRegistrarAsiento";
             this.Size = new System.Drawing.Size(908, 659);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
