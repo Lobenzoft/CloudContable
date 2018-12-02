@@ -14,6 +14,7 @@ namespace CloudContable
         public FLibroMayor()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

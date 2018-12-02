@@ -14,6 +14,7 @@ namespace CloudContable
         public FFlujoEfectivo()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

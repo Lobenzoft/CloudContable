@@ -9,12 +9,11 @@ using System.Windows.Forms;
 
 namespace CloudContable
 {
-    public partial class FEvolucionPatrimonio : UserControl
+    public partial class FLibroVC : UserControl
     {
-        public FEvolucionPatrimonio()
+        public FLibroVC()
         {
             InitializeComponent();
-            SendKeys.Send("{TAB}");
         }
     }
 }

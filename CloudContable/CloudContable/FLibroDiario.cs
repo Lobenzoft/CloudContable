@@ -14,6 +14,7 @@ namespace CloudContable
         public FLibroDiario()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

@@ -38,6 +38,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>zen-b.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.14, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -57,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsPublic.cs" />
     <Compile Include="FBalanceGeneral.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +102,12 @@
     </Compile>
     <Compile Include="FLibroMayor.Designer.cs">
       <DependentUpon>FLibroMayor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLibroVC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLibroVC.Designer.cs">
+      <DependentUpon>FLibroVC.cs</DependentUpon>
     </Compile>
     <Compile Include="FSumasSaldos.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +156,9 @@
     <EmbeddedResource Include="FLibroMayor.resx">
       <DependentUpon>FLibroMayor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLibroVC.resx">
+      <DependentUpon>FLibroVC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FSumasSaldos.resx">
       <DependentUpon>FSumasSaldos.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="zen-b.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

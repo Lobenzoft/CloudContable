@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CloudContable));
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.ContenidoPanel = new System.Windows.Forms.Panel();
             this.DetallePanel = new System.Windows.Forms.Panel();
@@ -66,7 +67,9 @@
             this.Controls.Add(this.DetallePanel);
             this.Controls.Add(this.MenuPanel);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CloudContable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

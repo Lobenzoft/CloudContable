@@ -14,6 +14,7 @@ namespace CloudContable
         public FBalanceGeneral()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

@@ -362,6 +362,7 @@
             this.Controls.Add(this.textBoxX1);
             this.Name = "FRegistrarAsiento";
             this.Size = new System.Drawing.Size(908, 659);
+            this.Load += new System.EventHandler(this.FRegistrarAsiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

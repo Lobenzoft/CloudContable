@@ -14,6 +14,7 @@ namespace CloudContable
         public FSumasSaldos()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

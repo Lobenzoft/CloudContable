@@ -154,6 +154,7 @@
             this.buttonX8.TabIndex = 7;
             this.buttonX8.TabStop = false;
             this.buttonX8.Text = "Libro de Compras y Ventas";
+            this.buttonX8.Click += new System.EventHandler(this.buttonX8_Click);
             // 
             // Menu1
             // 

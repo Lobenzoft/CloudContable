@@ -14,6 +14,11 @@ namespace CloudContable
         public FRegistrarAsiento()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
+        }
+
+        private void FRegistrarAsiento_Load(object sender, EventArgs e)
+        {
         }
     }
 }

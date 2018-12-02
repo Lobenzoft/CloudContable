@@ -14,6 +14,7 @@ namespace CloudContable
         public FEstadoResultado()
         {
             InitializeComponent();
+            SendKeys.Send("{TAB}");
         }
     }
 }

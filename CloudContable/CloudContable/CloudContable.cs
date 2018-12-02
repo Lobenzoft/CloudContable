@@ -12,13 +12,12 @@ namespace CloudContable
         public CloudContable()
         {
             InitializeComponent();
-            StyleManager.MetroColorGeneratorParameters = new MetroColorGeneratorParameters(Color.White, Color.FromArgb(0, 223, 252));
+            //StyleManager.MetroColorGeneratorParameters = new MetroColorGeneratorParameters(Color.White, Color.FromArgb(0, 223, 252));
             ContenidoM = MenuPanel;
             ContenidoC = ContenidoPanel;
             ContenidoD = DetallePanel;
             Menu1 menu1 = new Menu1();
             CargarM(menu1);
-
             Inicio inicio = new Inicio();
             CargarC(inicio);
         }
@@ -28,12 +27,26 @@ namespace CloudContable
             ContenidoM.Controls.Add(cont);
         }
 
-
         public static void CargarC(Control cont)
         {
+            ClsPublic.Ocultar(ContenidoC);
             ContenidoC.Controls.Clear();
-            ContenidoC.Controls.Add(cont);
+            Control fh = cont as Control;
+            ContenidoC.Controls.Add(fh);
+            ClsPublic.Animar(ContenidoC);
+            //ContenidoC.Controls.Clear();
+            //ContenidoC.Controls.Add(cont);
         }
+
+        public static void CargarForm(object formulario)
+        {
+            ClsPublic.Ocultar(ContenidoC);
+            ContenidoC.Controls.Clear();
+            Control fh = formulario as Control;
+            ContenidoC.Controls.Add(fh);
+            ClsPublic.Animar(ContenidoC);
+        }
+
         public static void CargarD(Control cont)
         {
             ContenidoD.Controls.Clear();
