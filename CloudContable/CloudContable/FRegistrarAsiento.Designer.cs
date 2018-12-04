@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.NComprobanteT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -56,22 +56,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBoxX1
+            // NComprobanteT
             // 
-            this.textBoxX1.BackColor = System.Drawing.Color.White;
+            this.NComprobanteT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX1.Location = new System.Drawing.Point(6, 16);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX1.TabIndex = 0;
+            this.NComprobanteT.Border.Class = "TextBoxBorder";
+            this.NComprobanteT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NComprobanteT.DisabledBackColor = System.Drawing.Color.White;
+            this.NComprobanteT.ForeColor = System.Drawing.Color.Black;
+            this.NComprobanteT.Location = new System.Drawing.Point(6, 16);
+            this.NComprobanteT.Name = "NComprobanteT";
+            this.NComprobanteT.PreventEnterBeep = true;
+            this.NComprobanteT.ReadOnly = true;
+            this.NComprobanteT.Size = new System.Drawing.Size(158, 20);
+            this.NComprobanteT.TabIndex = 0;
             // 
             // label1
             // 
@@ -155,7 +155,6 @@
             this.textBoxX4.Location = new System.Drawing.Point(200, 16);
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.ReadOnly = true;
             this.textBoxX4.Size = new System.Drawing.Size(158, 20);
             this.textBoxX4.TabIndex = 7;
             // 
@@ -359,7 +358,7 @@
             this.Controls.Add(this.textBoxX2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.NComprobanteT);
             this.Name = "FRegistrarAsiento";
             this.Size = new System.Drawing.Size(908, 659);
             this.Load += new System.EventHandler(this.FRegistrarAsiento_Load);
@@ -371,7 +370,7 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX NComprobanteT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;

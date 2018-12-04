@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsComprobante.cs" />
+    <Compile Include="ClsCloud.cs" />
+    <Compile Include="ClsLogin.cs" />
+    <Compile Include="ClsPlanCuentas.cs" />
     <Compile Include="ClsPublic.cs" />
     <Compile Include="FBalanceGeneral.cs">
       <SubType>UserControl</SubType>
@@ -108,6 +112,18 @@
     </Compile>
     <Compile Include="FLibroVC.Designer.cs">
       <DependentUpon>FLibroVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPlanCuentas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FPlanCuentas.Designer.cs">
+      <DependentUpon>FPlanCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="FSumasSaldos.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FLibroVC.resx">
       <DependentUpon>FLibroVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPlanCuentas.resx">
+      <DependentUpon>FPlanCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSumasSaldos.resx">
       <DependentUpon>FSumasSaldos.cs</DependentUpon>
