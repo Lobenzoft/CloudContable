@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.NComprobanteT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.GlosaT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -44,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Data1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +54,17 @@
             this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.MenuEliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarCeldaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuIVA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.valorNeto87ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iVA13ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iT3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rCIVACOMPRAS8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rCIVASERVICIOS155ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.Data1)).BeginInit();
+            this.MenuEliminar.SuspendLayout();
+            this.MenuIVA.SuspendLayout();
             this.SuspendLayout();
             // 
             // NComprobanteT
@@ -125,22 +136,22 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Numero de Cheque";
             // 
-            // textBoxX3
+            // GlosaT
             // 
-            this.textBoxX3.BackColor = System.Drawing.Color.White;
+            this.GlosaT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX3.Location = new System.Drawing.Point(6, 94);
-            this.textBoxX3.Multiline = true;
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(350, 70);
-            this.textBoxX3.TabIndex = 6;
+            this.GlosaT.Border.Class = "TextBoxBorder";
+            this.GlosaT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.GlosaT.DisabledBackColor = System.Drawing.Color.White;
+            this.GlosaT.ForeColor = System.Drawing.Color.Black;
+            this.GlosaT.Location = new System.Drawing.Point(6, 94);
+            this.GlosaT.Multiline = true;
+            this.GlosaT.Name = "GlosaT";
+            this.GlosaT.PreventEnterBeep = true;
+            this.GlosaT.Size = new System.Drawing.Size(350, 70);
+            this.GlosaT.TabIndex = 5;
             // 
             // textBoxX4
             // 
@@ -156,7 +167,7 @@
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
             this.textBoxX4.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX4.TabIndex = 7;
+            this.textBoxX4.TabIndex = 1;
             // 
             // label5
             // 
@@ -177,14 +188,14 @@
             this.comboBoxEx1.Location = new System.Drawing.Point(400, 16);
             this.comboBoxEx1.Name = "comboBoxEx1";
             this.comboBoxEx1.Size = new System.Drawing.Size(158, 20);
-            this.comboBoxEx1.TabIndex = 9;
+            this.comboBoxEx1.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(400, 54);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(158, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // textBoxX5
             // 
@@ -201,7 +212,7 @@
             this.textBoxX5.PreventEnterBeep = true;
             this.textBoxX5.ReadOnly = true;
             this.textBoxX5.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX5.TabIndex = 11;
+            this.textBoxX5.TabIndex = 6;
             // 
             // textBoxX6
             // 
@@ -218,7 +229,7 @@
             this.textBoxX6.PreventEnterBeep = true;
             this.textBoxX6.ReadOnly = true;
             this.textBoxX6.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX6.TabIndex = 12;
+            this.textBoxX6.TabIndex = 7;
             // 
             // label6
             // 
@@ -247,21 +258,25 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Tasa de Cambio U.F.V.";
             // 
-            // dataGridView1
+            // Data1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Data1.BackgroundColor = System.Drawing.Color.White;
+            this.Data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Data1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 184);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 15;
-            this.dataGridView1.Size = new System.Drawing.Size(899, 272);
-            this.dataGridView1.TabIndex = 16;
+            this.Data1.Location = new System.Drawing.Point(6, 184);
+            this.Data1.Name = "Data1";
+            this.Data1.RowHeadersWidth = 15;
+            this.Data1.Size = new System.Drawing.Size(899, 424);
+            this.Data1.TabIndex = 8;
+            this.Data1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data1_CellEndEdit);
+            this.Data1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Data1_EditingControlShowing);
+            this.Data1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Data1_MouseClick);
+            this.Data1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Data1_MouseDown);
             // 
             // Column1
             // 
@@ -334,6 +349,66 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Totales : ";
             // 
+            // MenuEliminar
+            // 
+            this.MenuEliminar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarCeldaToolStripMenuItem});
+            this.MenuEliminar.Name = "MenuEliminar";
+            this.MenuEliminar.Size = new System.Drawing.Size(151, 26);
+            // 
+            // eliminarCeldaToolStripMenuItem
+            // 
+            this.eliminarCeldaToolStripMenuItem.Name = "eliminarCeldaToolStripMenuItem";
+            this.eliminarCeldaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.eliminarCeldaToolStripMenuItem.Text = "Eliminar Celda";
+            this.eliminarCeldaToolStripMenuItem.Click += new System.EventHandler(this.EliminarCeldaToolStripMenuItem_Click);
+            // 
+            // MenuIVA
+            // 
+            this.MenuIVA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.valorNeto87ToolStripMenuItem,
+            this.iVA13ToolStripMenuItem,
+            this.iT3ToolStripMenuItem,
+            this.rCIVACOMPRAS8ToolStripMenuItem,
+            this.rCIVASERVICIOS155ToolStripMenuItem});
+            this.MenuIVA.Name = "MenuIVA";
+            this.MenuIVA.Size = new System.Drawing.Size(210, 136);
+            // 
+            // valorNeto87ToolStripMenuItem
+            // 
+            this.valorNeto87ToolStripMenuItem.Name = "valorNeto87ToolStripMenuItem";
+            this.valorNeto87ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.valorNeto87ToolStripMenuItem.Text = "Valor Neto (87%)";
+            this.valorNeto87ToolStripMenuItem.Click += new System.EventHandler(this.valorNeto87ToolStripMenuItem_Click);
+            // 
+            // iVA13ToolStripMenuItem
+            // 
+            this.iVA13ToolStripMenuItem.Name = "iVA13ToolStripMenuItem";
+            this.iVA13ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.iVA13ToolStripMenuItem.Text = "IVA (13%)";
+            this.iVA13ToolStripMenuItem.Click += new System.EventHandler(this.iVA13ToolStripMenuItem_Click);
+            // 
+            // iT3ToolStripMenuItem
+            // 
+            this.iT3ToolStripMenuItem.Name = "iT3ToolStripMenuItem";
+            this.iT3ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.iT3ToolStripMenuItem.Text = "IT (3%)";
+            this.iT3ToolStripMenuItem.Click += new System.EventHandler(this.iT3ToolStripMenuItem_Click);
+            // 
+            // rCIVACOMPRAS8ToolStripMenuItem
+            // 
+            this.rCIVACOMPRAS8ToolStripMenuItem.Name = "rCIVACOMPRAS8ToolStripMenuItem";
+            this.rCIVACOMPRAS8ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.rCIVACOMPRAS8ToolStripMenuItem.Text = "RC IVA COMPRAS (8%)";
+            this.rCIVACOMPRAS8ToolStripMenuItem.Click += new System.EventHandler(this.rCIVACOMPRAS8ToolStripMenuItem_Click);
+            // 
+            // rCIVASERVICIOS155ToolStripMenuItem
+            // 
+            this.rCIVASERVICIOS155ToolStripMenuItem.Name = "rCIVASERVICIOS155ToolStripMenuItem";
+            this.rCIVASERVICIOS155ToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.rCIVASERVICIOS155ToolStripMenuItem.Text = "RC IVA SERVICIOS (15.5%)";
+            this.rCIVASERVICIOS155ToolStripMenuItem.Click += new System.EventHandler(this.rCIVASERVICIOS155ToolStripMenuItem_Click);
+            // 
             // FRegistrarAsiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,7 +417,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxX8);
             this.Controls.Add(this.textBoxX7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Data1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -352,7 +427,7 @@
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxX4);
-            this.Controls.Add(this.textBoxX3);
+            this.Controls.Add(this.GlosaT);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxX2);
@@ -362,7 +437,9 @@
             this.Name = "FRegistrarAsiento";
             this.Size = new System.Drawing.Size(908, 659);
             this.Load += new System.EventHandler(this.FRegistrarAsiento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Data1)).EndInit();
+            this.MenuEliminar.ResumeLayout(false);
+            this.MenuIVA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,7 +453,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX GlosaT;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
         private System.Windows.Forms.Label label5;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
@@ -386,7 +463,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Data1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -395,5 +472,13 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ContextMenuStrip MenuEliminar;
+        private System.Windows.Forms.ToolStripMenuItem eliminarCeldaToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip MenuIVA;
+        private System.Windows.Forms.ToolStripMenuItem valorNeto87ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iVA13ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iT3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rCIVACOMPRAS8ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rCIVASERVICIOS155ToolStripMenuItem;
     }
 }

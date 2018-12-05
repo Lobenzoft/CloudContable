@@ -25,6 +25,7 @@ namespace CloudContable
             clslog.OpenDB();
             clslog.IniciarSession(Data1,EmpresaT.Text,UserT.Text,PassT.Text);
             clslog.CloseDB();
+            SendKeys.Send("{TAB}");
         }
 
         private void SeleccionB_Click(object sender, EventArgs e)

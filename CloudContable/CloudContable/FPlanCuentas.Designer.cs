@@ -39,6 +39,7 @@
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.CancelarB = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.Data1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,12 +51,16 @@
             this.Data1.BackgroundColor = System.Drawing.Color.White;
             this.Data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data1.Location = new System.Drawing.Point(3, 61);
+            this.Data1.MultiSelect = false;
             this.Data1.Name = "Data1";
             this.Data1.ReadOnly = true;
             this.Data1.RowHeadersWidth = 15;
             this.Data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Data1.Size = new System.Drawing.Size(902, 595);
-            this.Data1.TabIndex = 3;
+            this.Data1.TabIndex = 0;
+            this.Data1.TabStop = false;
+            this.Data1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data1_CellDoubleClick);
+            this.Data1.DoubleClick += new System.EventHandler(this.Data1_DoubleClick);
             // 
             // textBoxX4
             // 
@@ -71,7 +76,7 @@
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
             this.textBoxX4.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX4.TabIndex = 0;
+            this.textBoxX4.TabIndex = 1;
             // 
             // label4
             // 
@@ -96,7 +101,7 @@
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.Size = new System.Drawing.Size(305, 20);
-            this.textBoxX1.TabIndex = 1;
+            this.textBoxX1.TabIndex = 2;
             // 
             // label1
             // 
@@ -117,7 +122,7 @@
             this.comboBoxEx1.Location = new System.Drawing.Point(572, 19);
             this.comboBoxEx1.Name = "comboBoxEx1";
             this.comboBoxEx1.Size = new System.Drawing.Size(158, 20);
-            this.comboBoxEx1.TabIndex = 2;
+            this.comboBoxEx1.TabIndex = 3;
             // 
             // label5
             // 
@@ -133,7 +138,7 @@
             this.buttonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX7.FocusCuesEnabled = false;
-            this.buttonX7.Location = new System.Drawing.Point(830, 14);
+            this.buttonX7.Location = new System.Drawing.Point(736, 14);
             this.buttonX7.Name = "buttonX7";
             this.buttonX7.Size = new System.Drawing.Size(75, 25);
             this.buttonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -141,7 +146,7 @@
             this.buttonItem3,
             this.buttonItem4,
             this.buttonItem1});
-            this.buttonX7.TabIndex = 5;
+            this.buttonX7.TabIndex = 4;
             this.buttonX7.TabStop = false;
             this.buttonX7.Text = "Opciones";
             // 
@@ -149,7 +154,7 @@
             // 
             this.buttonItem3.GlobalItem = false;
             this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.Text = "Agregar Cuenta";
+            this.buttonItem3.Text = "Agregar Sub Cuenta";
             // 
             // buttonItem4
             // 
@@ -164,11 +169,24 @@
             this.buttonItem1.Text = "Eliminar Cuenta";
             this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
+            // CancelarB
+            // 
+            this.CancelarB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.CancelarB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.CancelarB.Location = new System.Drawing.Point(830, 14);
+            this.CancelarB.Name = "CancelarB";
+            this.CancelarB.Size = new System.Drawing.Size(75, 25);
+            this.CancelarB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CancelarB.TabIndex = 5;
+            this.CancelarB.Text = "Cerrar";
+            this.CancelarB.Click += new System.EventHandler(this.CancelarB_Click);
+            // 
             // FPlanCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.CancelarB);
             this.Controls.Add(this.buttonX7);
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.label5);
@@ -198,5 +216,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonX CancelarB;
     }
 }

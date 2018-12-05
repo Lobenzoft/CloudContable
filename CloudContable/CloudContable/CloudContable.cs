@@ -56,6 +56,7 @@ namespace CloudContable
             //ClsPublic.Ocultar(ContenidoC.Controls[i-1]);
             ContenidoC.Controls.RemoveAt(i - 1);
             ContenidoC.Controls[0].Visible = true;
+            ContenidoC.Controls[0].Focus();
         }
 
         public static void CargarForm(object formulario)

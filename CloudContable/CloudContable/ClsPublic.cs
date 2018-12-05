@@ -56,7 +56,94 @@ namespace CloudContable
          *
          */
 
+        /*
+         *
+         * METODO METODO PARA CARGAR CODIGO Y CUENTA A AUTOCOMPLETE
+         *
+         */
+        public class DataPlan
+        {
+            public string Codigo { get; set; }
+            public string TCodigo { get; set; }
+            public string Cuenta { get; set; }
+        }
 
+        public static List<DataPlan> AutoPlan(DataTable datatable)
+        {
+            List<DataPlan> lista = new List<DataPlan>();
+            foreach (DataRow DtRow in datatable.Rows)
+            {
+                if (DtRow[4].Equals("5"))
+                {
+                    DataPlan item = new DataPlan
+                    {
+                        Codigo = Convert.ToString(DtRow[1]),
+                        TCodigo = String.Format("{0}  ||  {1}", DtRow[1], DtRow[2]),
+                        Cuenta = Convert.ToString(DtRow[2]),
+                    };
+                    lista.Add(item);
+                }
+                
+            }
+            return lista;
+        }
+
+        public static string [] ObtenerDataPlanCuentaAutoComplete(string Texto)
+        {
+            string[] Data = new string[] { "", "" };
+            foreach (DataRow DtRow in CloudContable.plan_cuentas.Rows)
+            {
+                string compare = String.Format("{0}  ||  {1}", DtRow[1], DtRow[2]);
+                if (compare.Equals(Texto))
+                {
+                    Data[0] = DtRow[1].ToString();
+                    Data[1] = DtRow[2].ToString();
+                }
+            }
+            if (Data[0].Equals(""))
+            {
+                foreach (DataRow DtRow in CloudContable.plan_cuentas.Rows)
+                {
+                    string compare = String.Format("{0}", DtRow[2]);
+                    if (compare.Equals(Texto))
+                    {
+                        Data[0] = DtRow[1].ToString();
+                        Data[1] = DtRow[2].ToString();
+                    }
+                }
+            }
+            return Data;
+        }
+        /*
+         *
+         * METODO METODO PARA CARGAR CODIGO Y CUENTA A AUTOCOMPLETE
+         *
+         */
+
+        public static AutoCompleteStringCollection CargatAutoCompleteCuenta()
+        {
+            List<DataPlan> _lista = new List<DataPlan>();
+            AutoCompleteStringCollection stringdata = new AutoCompleteStringCollection();
+            _lista = AutoPlan(CloudContable.plan_cuentas);
+            foreach (DataPlan item in _lista)
+            {
+                stringdata.Add(Convert.ToString(item.Cuenta));
+            }
+            
+            return stringdata;
+        }
+
+        public static AutoCompleteStringCollection CargatAutoCompleteCodigo()
+        {
+            List<DataPlan> _lista = new List<DataPlan>();
+            AutoCompleteStringCollection stringdata = new AutoCompleteStringCollection();
+            _lista = AutoPlan(CloudContable.plan_cuentas);
+            foreach (DataPlan item in _lista)
+            {
+                stringdata.Add(Convert.ToString(item.TCodigo));
+            }
+            return stringdata;
+        }
 
 
 
@@ -87,7 +174,22 @@ namespace CloudContable
             return dt;
         }
 
-
+        public static void LimpiarDataGridSinCodigo(DataGridView data)
+        {
+            for (int fila = 0; fila < data.Rows.Count - 1; fila++)
+            {
+                if (data.Rows[fila].Cells[0].Value == null || data.Rows[fila].Cells[0].Value.ToString() == "")
+                {
+                    try
+                    {
+                        data.Rows.RemoveAt(fila);
+                    }
+                    catch(InvalidOperationException)
+                    {
+                    }
+                }
+            }
+        }
 
 
 

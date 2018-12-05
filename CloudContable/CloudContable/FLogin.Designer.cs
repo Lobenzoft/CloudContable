@@ -152,6 +152,7 @@
             this.Data1.Name = "Data1";
             this.Data1.ReadOnly = true;
             this.Data1.RowHeadersWidth = 15;
+            this.Data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Data1.Size = new System.Drawing.Size(705, 272);
             this.Data1.TabIndex = 5;
             // 
