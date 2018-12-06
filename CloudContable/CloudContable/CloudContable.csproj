@@ -83,6 +83,12 @@
     <Compile Include="FEvolucionPatrimonio.Designer.cs">
       <DependentUpon>FEvolucionPatrimonio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFeedBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FFeedBack.Designer.cs">
+      <DependentUpon>FFeedBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="FFlujoEfectivo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,11 +151,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FRegistrarAsiento.cs">
+    <Compile Include="FComprobante.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FRegistrarAsiento.Designer.cs">
-      <DependentUpon>FRegistrarAsiento.cs</DependentUpon>
+    <Compile Include="FComprobante.Designer.cs">
+      <DependentUpon>FComprobante.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FBalanceGeneral.resx">
       <DependentUpon>FBalanceGeneral.cs</DependentUpon>
@@ -199,8 +205,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FRegistrarAsiento.resx">
-      <DependentUpon>FRegistrarAsiento.cs</DependentUpon>
+    <EmbeddedResource Include="FComprobante.resx">
+      <DependentUpon>FComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

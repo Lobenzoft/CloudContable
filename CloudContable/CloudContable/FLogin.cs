@@ -33,6 +33,7 @@ namespace CloudContable
             try
             {
                 CloudContable.empresa = Data1.CurrentRow.Cells[0].Value.ToString();
+                CloudContable.usuario = Data1.CurrentRow.Cells[6].Value.ToString();
                 clsplan.OpenDB();
                 CloudContable.plan_cuentas = clsplan.ObtenerPlanCuentas(Data1.CurrentRow.Cells[5].Value.ToString());
                 clsplan.CloseDB();

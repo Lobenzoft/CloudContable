@@ -147,8 +147,11 @@ namespace CloudContable
 
 
 
-        public DataTable DataGridToDataTable(DataGridView data)
+        public static DataTable DataGridToDataTable(DataGridView data)
         {
+            DataTable dt = new DataTable();
+            dt = data.DataSource as DataTable;
+            /*
             DataTable dt = new DataTable();
             DataColumn[] dcs = new DataColumn[] { };
 
@@ -171,6 +174,7 @@ namespace CloudContable
                 }
                 dt.Rows.Add(drow);
             }
+            */
             return dt;
         }
 

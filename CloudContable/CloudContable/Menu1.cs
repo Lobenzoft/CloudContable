@@ -19,7 +19,7 @@ namespace CloudContable
         private void ComprobanteB_Click(object sender, EventArgs e)
         {
             //FRegistrarAsiento registrarasiento = new FRegistrarAsiento();
-            CloudContable.CargarC(new FRegistrarAsiento());
+            CloudContable.CargarC(new FComprobante());
         }
 
         private void LDiarioB_Click(object sender, EventArgs e)

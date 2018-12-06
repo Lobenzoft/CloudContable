@@ -9,16 +9,20 @@ using System.Windows.Forms;
 
 namespace CloudContable
 {
-    public partial class FRegistrarAsiento : UserControl
+    public partial class FComprobante : UserControl
     {
         ClsComprobante clsComp;
-        public FRegistrarAsiento()
+        public FComprobante()
         {
             InitializeComponent();
             clsComp = new ClsComprobante();
             clsComp.OpenDB();
             NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.empresa);
             clsComp.CloseDB();
+            TipoComprobanteC.Items.Add("Diaro");
+            TipoComprobanteC.Items.Add("Ingreso");
+            TipoComprobanteC.Items.Add("Egreso");
+            TipoComprobanteC.SelectedIndex = 0;
             SendKeys.Send("{TAB}");
         }
 
@@ -196,6 +200,18 @@ namespace CloudContable
             double rcventas = Convert.ToDouble(Data1.CurrentCell.Value);
             rcventas = (rcventas * 0.155);
             Data1.CurrentCell.Value = rcventas.ToString();
+        }
+
+        private void CancelarB_Click(object sender, EventArgs e)
+        {
+            clsComp.OpenDB();
+            if (!clsComp.ObtenerNComprobante(CloudContable.empresa).Equals(NComprobanteT.Text))
+            {
+                MessageBox.Show("El Número de Comprobante Se ha Actualizado");
+            }
+            clsComp.RegistrarComprobante(Data1,CloudContable.empresa, CloudContable.usuario, clsComp.ObtenerNComprobante(CloudContable.empresa), TipoComprobanteC.SelectedItem.ToString(), RazonSocialT.Text, GlosaT.Text, NChequeT.Text, FechaComprobanteD.Value.ToString("yyyy-MM-dd"),TasaUSDT.Text,TasaUFVT.Text);
+            NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.empresa);
+            clsComp.CloseDB();
         }
     }
 }
