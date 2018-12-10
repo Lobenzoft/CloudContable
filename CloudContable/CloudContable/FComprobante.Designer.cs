@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FComprobante));
             this.NComprobanteT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,9 +64,16 @@
             this.rCIVACOMPRAS8ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rCIVASERVICIOS155ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CancelarB = new DevComponents.DotNetBar.ButtonX();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.DiferenciaL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Data1)).BeginInit();
             this.MenuEliminar.SuspendLayout();
             this.MenuIVA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // NComprobanteT
@@ -326,6 +334,7 @@
             this.TotalHaberT.ReadOnly = true;
             this.TotalHaberT.Size = new System.Drawing.Size(96, 20);
             this.TotalHaberT.TabIndex = 17;
+            this.TotalHaberT.Text = "0.00";
             // 
             // TotalDebeT
             // 
@@ -343,6 +352,7 @@
             this.TotalDebeT.ReadOnly = true;
             this.TotalDebeT.Size = new System.Drawing.Size(99, 20);
             this.TotalDebeT.TabIndex = 18;
+            this.TotalDebeT.Text = "0.00";
             // 
             // label9
             // 
@@ -425,11 +435,74 @@
             this.CancelarB.Text = "Registrar Asiento";
             this.CancelarB.Click += new System.EventHandler(this.CancelarB_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(656, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(189, 15);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "REGLAS DE CONTABLIDAD";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(564, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(154, 15);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "CODIGO       CUENTA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Handwriting", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(785, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 15);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "DEBE      HABER";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(564, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(341, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(683, 639);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Diferencia :";
+            // 
+            // DiferenciaL
+            // 
+            this.DiferenciaL.AutoSize = true;
+            this.DiferenciaL.Location = new System.Drawing.Point(750, 639);
+            this.DiferenciaL.Name = "DiferenciaL";
+            this.DiferenciaL.Size = new System.Drawing.Size(28, 13);
+            this.DiferenciaL.TabIndex = 28;
+            this.DiferenciaL.Text = "0.00";
+            // 
             // FComprobante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.DiferenciaL);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.CancelarB);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TotalDebeT);
@@ -451,12 +524,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NComprobanteT);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FComprobante";
             this.Size = new System.Drawing.Size(908, 659);
             this.Load += new System.EventHandler(this.FRegistrarAsiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Data1)).EndInit();
             this.MenuEliminar.ResumeLayout(false);
             this.MenuIVA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,5 +573,11 @@
         private System.Windows.Forms.ToolStripMenuItem rCIVACOMPRAS8ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rCIVASERVICIOS155ToolStripMenuItem;
         private DevComponents.DotNetBar.ButtonX CancelarB;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label DiferenciaL;
     }
 }

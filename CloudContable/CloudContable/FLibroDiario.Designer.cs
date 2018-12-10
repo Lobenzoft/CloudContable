@@ -30,138 +30,114 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLibroDiario));
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TDebeT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.THaberT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.Data1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.UFVT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.USDT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.FechaComprobanteD = new System.Windows.Forms.DateTimePicker();
+            this.TipoAsientoC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.NChequeT = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.GlosaT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.RazonSocialT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.NComprobanteT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.FechaInicioD = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.FechaFinD = new System.Windows.Forms.DateTimePicker();
+            this.PrimeroB = new DevComponents.DotNetBar.ButtonX();
+            this.AtrasB = new DevComponents.DotNetBar.ButtonX();
+            this.AdelanteB = new DevComponents.DotNetBar.ButtonX();
+            this.FinalB = new DevComponents.DotNetBar.ButtonX();
             this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.TipoComprobanteC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label12 = new System.Windows.Forms.Label();
             this.radialMenuItem4 = new DevComponents.DotNetBar.RadialMenuItem();
             this.radialMenuItem5 = new DevComponents.DotNetBar.RadialMenuItem();
-            this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.OpcioneB = new DevComponents.DotNetBar.ButtonX();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonX7 = new DevComponents.DotNetBar.ButtonX();
+            this.ReportesB = new DevComponents.DotNetBar.ButtonX();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.Data1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(629, 621);
+            this.label9.Location = new System.Drawing.Point(632, 643);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 39;
             this.label9.Text = "Totales : ";
             // 
-            // textBoxX8
+            // TDebeT
             // 
-            this.textBoxX8.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX8.Border.Class = "TextBoxBorder";
-            this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX8.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX8.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX8.Location = new System.Drawing.Point(686, 614);
-            this.textBoxX8.Name = "textBoxX8";
-            this.textBoxX8.PreventEnterBeep = true;
-            this.textBoxX8.ReadOnly = true;
-            this.textBoxX8.Size = new System.Drawing.Size(99, 20);
-            this.textBoxX8.TabIndex = 38;
-            // 
-            // textBoxX7
-            // 
-            this.textBoxX7.BackColor = System.Drawing.Color.White;
+            this.TDebeT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX7.Border.Class = "TextBoxBorder";
-            this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX7.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX7.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX7.Location = new System.Drawing.Point(789, 614);
-            this.textBoxX7.Name = "textBoxX7";
-            this.textBoxX7.PreventEnterBeep = true;
-            this.textBoxX7.ReadOnly = true;
-            this.textBoxX7.Size = new System.Drawing.Size(96, 20);
-            this.textBoxX7.TabIndex = 37;
+            this.TDebeT.Border.Class = "TextBoxBorder";
+            this.TDebeT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TDebeT.DisabledBackColor = System.Drawing.Color.White;
+            this.TDebeT.ForeColor = System.Drawing.Color.Black;
+            this.TDebeT.Location = new System.Drawing.Point(689, 636);
+            this.TDebeT.Name = "TDebeT";
+            this.TDebeT.PreventEnterBeep = true;
+            this.TDebeT.ReadOnly = true;
+            this.TDebeT.Size = new System.Drawing.Size(99, 20);
+            this.TDebeT.TabIndex = 38;
             // 
-            // dataGridView1
+            // THaberT
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 184);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 15;
-            this.dataGridView1.Size = new System.Drawing.Size(899, 272);
-            this.dataGridView1.TabIndex = 36;
+            this.THaberT.BackColor = System.Drawing.Color.White;
             // 
-            // Column1
             // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 145;
             // 
-            // Column2
+            this.THaberT.Border.Class = "TextBoxBorder";
+            this.THaberT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.THaberT.DisabledBackColor = System.Drawing.Color.White;
+            this.THaberT.ForeColor = System.Drawing.Color.Black;
+            this.THaberT.Location = new System.Drawing.Point(792, 636);
+            this.THaberT.Name = "THaberT";
+            this.THaberT.PreventEnterBeep = true;
+            this.THaberT.ReadOnly = true;
+            this.THaberT.Size = new System.Drawing.Size(96, 20);
+            this.THaberT.TabIndex = 37;
             // 
-            this.Column2.HeaderText = "Cuenta";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 220;
+            // Data1
             // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Detalle";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 300;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Debe";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Haber";
-            this.Column5.Name = "Column5";
+            this.Data1.AllowUserToAddRows = false;
+            this.Data1.AllowUserToDeleteRows = false;
+            this.Data1.BackgroundColor = System.Drawing.Color.White;
+            this.Data1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Data1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.cuenta,
+            this.detalle,
+            this.debe,
+            this.haber});
+            this.Data1.Location = new System.Drawing.Point(6, 184);
+            this.Data1.Name = "Data1";
+            this.Data1.ReadOnly = true;
+            this.Data1.RowHeadersWidth = 15;
+            this.Data1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Data1.Size = new System.Drawing.Size(899, 441);
+            this.Data1.TabIndex = 36;
             // 
             // label8
             // 
@@ -190,58 +166,60 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Fecha";
             // 
-            // textBoxX6
+            // UFVT
             // 
-            this.textBoxX6.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX6.Border.Class = "TextBoxBorder";
-            this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX6.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX6.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX6.Location = new System.Drawing.Point(747, 133);
-            this.textBoxX6.Name = "textBoxX6";
-            this.textBoxX6.PreventEnterBeep = true;
-            this.textBoxX6.ReadOnly = true;
-            this.textBoxX6.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX6.TabIndex = 32;
-            // 
-            // textBoxX5
-            // 
-            this.textBoxX5.BackColor = System.Drawing.Color.White;
+            this.UFVT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX5.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX5.Location = new System.Drawing.Point(747, 94);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.ReadOnly = true;
-            this.textBoxX5.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX5.TabIndex = 31;
+            this.UFVT.Border.Class = "TextBoxBorder";
+            this.UFVT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.UFVT.DisabledBackColor = System.Drawing.Color.White;
+            this.UFVT.ForeColor = System.Drawing.Color.Black;
+            this.UFVT.Location = new System.Drawing.Point(747, 133);
+            this.UFVT.Name = "UFVT";
+            this.UFVT.PreventEnterBeep = true;
+            this.UFVT.ReadOnly = true;
+            this.UFVT.Size = new System.Drawing.Size(158, 20);
+            this.UFVT.TabIndex = 32;
             // 
-            // dateTimePicker1
+            // USDT
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(747, 54);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(158, 20);
-            this.dateTimePicker1.TabIndex = 30;
+            this.USDT.BackColor = System.Drawing.Color.White;
             // 
-            // comboBoxEx1
             // 
-            this.comboBoxEx1.DisplayMember = "Text";
-            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxEx1.FormattingEnabled = true;
-            this.comboBoxEx1.ItemHeight = 14;
-            this.comboBoxEx1.Location = new System.Drawing.Point(747, 16);
-            this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(158, 20);
-            this.comboBoxEx1.TabIndex = 29;
+            // 
+            this.USDT.Border.Class = "TextBoxBorder";
+            this.USDT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.USDT.DisabledBackColor = System.Drawing.Color.White;
+            this.USDT.ForeColor = System.Drawing.Color.Black;
+            this.USDT.Location = new System.Drawing.Point(747, 94);
+            this.USDT.Name = "USDT";
+            this.USDT.PreventEnterBeep = true;
+            this.USDT.ReadOnly = true;
+            this.USDT.Size = new System.Drawing.Size(158, 20);
+            this.USDT.TabIndex = 31;
+            // 
+            // FechaComprobanteD
+            // 
+            this.FechaComprobanteD.Enabled = false;
+            this.FechaComprobanteD.Location = new System.Drawing.Point(747, 54);
+            this.FechaComprobanteD.Name = "FechaComprobanteD";
+            this.FechaComprobanteD.Size = new System.Drawing.Size(158, 20);
+            this.FechaComprobanteD.TabIndex = 30;
+            // 
+            // TipoAsientoC
+            // 
+            this.TipoAsientoC.DisplayMember = "Text";
+            this.TipoAsientoC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TipoAsientoC.Enabled = false;
+            this.TipoAsientoC.ForeColor = System.Drawing.Color.Black;
+            this.TipoAsientoC.FormattingEnabled = true;
+            this.TipoAsientoC.ItemHeight = 14;
+            this.TipoAsientoC.Location = new System.Drawing.Point(747, 16);
+            this.TipoAsientoC.Name = "TipoAsientoC";
+            this.TipoAsientoC.Size = new System.Drawing.Size(158, 20);
+            this.TipoAsientoC.TabIndex = 29;
             // 
             // label5
             // 
@@ -252,39 +230,40 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Tipo de Asiento";
             // 
-            // textBoxX4
+            // NChequeT
             // 
-            this.textBoxX4.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX4.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX4.Location = new System.Drawing.Point(547, 16);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.ReadOnly = true;
-            this.textBoxX4.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX4.TabIndex = 27;
-            // 
-            // textBoxX3
-            // 
-            this.textBoxX3.BackColor = System.Drawing.Color.White;
+            this.NChequeT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX3.Location = new System.Drawing.Point(353, 94);
-            this.textBoxX3.Multiline = true;
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(350, 70);
-            this.textBoxX3.TabIndex = 26;
+            this.NChequeT.Border.Class = "TextBoxBorder";
+            this.NChequeT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NChequeT.DisabledBackColor = System.Drawing.Color.White;
+            this.NChequeT.ForeColor = System.Drawing.Color.Black;
+            this.NChequeT.Location = new System.Drawing.Point(547, 16);
+            this.NChequeT.Name = "NChequeT";
+            this.NChequeT.PreventEnterBeep = true;
+            this.NChequeT.ReadOnly = true;
+            this.NChequeT.Size = new System.Drawing.Size(158, 20);
+            this.NChequeT.TabIndex = 27;
+            // 
+            // GlosaT
+            // 
+            this.GlosaT.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.GlosaT.Border.Class = "TextBoxBorder";
+            this.GlosaT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.GlosaT.DisabledBackColor = System.Drawing.Color.White;
+            this.GlosaT.ForeColor = System.Drawing.Color.Black;
+            this.GlosaT.Location = new System.Drawing.Point(353, 94);
+            this.GlosaT.Multiline = true;
+            this.GlosaT.Name = "GlosaT";
+            this.GlosaT.PreventEnterBeep = true;
+            this.GlosaT.ReadOnly = true;
+            this.GlosaT.Size = new System.Drawing.Size(350, 70);
+            this.GlosaT.TabIndex = 26;
             // 
             // label4
             // 
@@ -304,21 +283,22 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Glosa";
             // 
-            // textBoxX2
+            // RazonSocialT
             // 
-            this.textBoxX2.BackColor = System.Drawing.Color.White;
+            this.RazonSocialT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX2.Location = new System.Drawing.Point(353, 55);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(350, 20);
-            this.textBoxX2.TabIndex = 23;
+            this.RazonSocialT.Border.Class = "TextBoxBorder";
+            this.RazonSocialT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RazonSocialT.DisabledBackColor = System.Drawing.Color.White;
+            this.RazonSocialT.ForeColor = System.Drawing.Color.Black;
+            this.RazonSocialT.Location = new System.Drawing.Point(353, 55);
+            this.RazonSocialT.Name = "RazonSocialT";
+            this.RazonSocialT.PreventEnterBeep = true;
+            this.RazonSocialT.ReadOnly = true;
+            this.RazonSocialT.Size = new System.Drawing.Size(350, 20);
+            this.RazonSocialT.TabIndex = 23;
             // 
             // label2
             // 
@@ -338,22 +318,22 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Numero de Comprobante";
             // 
-            // textBoxX1
+            // NComprobanteT
             // 
-            this.textBoxX1.BackColor = System.Drawing.Color.White;
+            this.NComprobanteT.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX1.Location = new System.Drawing.Point(353, 16);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(158, 20);
-            this.textBoxX1.TabIndex = 20;
+            this.NComprobanteT.Border.Class = "TextBoxBorder";
+            this.NComprobanteT.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NComprobanteT.DisabledBackColor = System.Drawing.Color.White;
+            this.NComprobanteT.ForeColor = System.Drawing.Color.Black;
+            this.NComprobanteT.Location = new System.Drawing.Point(353, 16);
+            this.NComprobanteT.Name = "NComprobanteT";
+            this.NComprobanteT.PreventEnterBeep = true;
+            this.NComprobanteT.ReadOnly = true;
+            this.NComprobanteT.Size = new System.Drawing.Size(158, 20);
+            this.NComprobanteT.TabIndex = 20;
             // 
             // label10
             // 
@@ -364,12 +344,12 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "Filtar Desde";
             // 
-            // dateTimePicker2
+            // FechaInicioD
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 15);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(158, 20);
-            this.dateTimePicker2.TabIndex = 40;
+            this.FechaInicioD.Location = new System.Drawing.Point(3, 15);
+            this.FechaInicioD.Name = "FechaInicioD";
+            this.FechaInicioD.Size = new System.Drawing.Size(158, 20);
+            this.FechaInicioD.TabIndex = 40;
             // 
             // label11
             // 
@@ -380,63 +360,67 @@
             this.label11.TabIndex = 43;
             this.label11.Text = "Filtar Hasta";
             // 
-            // dateTimePicker3
+            // FechaFinD
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(3, 53);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(158, 20);
-            this.dateTimePicker3.TabIndex = 42;
+            this.FechaFinD.Location = new System.Drawing.Point(3, 53);
+            this.FechaFinD.Name = "FechaFinD";
+            this.FechaFinD.Size = new System.Drawing.Size(158, 20);
+            this.FechaFinD.TabIndex = 42;
             // 
-            // buttonX1
+            // PrimeroB
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.buttonX1.FocusCuesEnabled = false;
-            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
-            this.buttonX1.Location = new System.Drawing.Point(6, 141);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(25, 25);
-            this.buttonX1.TabIndex = 44;
-            this.buttonX1.TabStop = false;
+            this.PrimeroB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PrimeroB.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.PrimeroB.FocusCuesEnabled = false;
+            this.PrimeroB.Image = ((System.Drawing.Image)(resources.GetObject("PrimeroB.Image")));
+            this.PrimeroB.Location = new System.Drawing.Point(6, 141);
+            this.PrimeroB.Name = "PrimeroB";
+            this.PrimeroB.Size = new System.Drawing.Size(25, 25);
+            this.PrimeroB.TabIndex = 44;
+            this.PrimeroB.TabStop = false;
+            this.PrimeroB.Click += new System.EventHandler(this.PrimeroB_Click);
             // 
-            // buttonX2
+            // AtrasB
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.buttonX2.FocusCuesEnabled = false;
-            this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
-            this.buttonX2.Location = new System.Drawing.Point(38, 141);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(25, 25);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 45;
-            this.buttonX2.TabStop = false;
+            this.AtrasB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.AtrasB.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.AtrasB.FocusCuesEnabled = false;
+            this.AtrasB.Image = ((System.Drawing.Image)(resources.GetObject("AtrasB.Image")));
+            this.AtrasB.Location = new System.Drawing.Point(38, 141);
+            this.AtrasB.Name = "AtrasB";
+            this.AtrasB.Size = new System.Drawing.Size(25, 25);
+            this.AtrasB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AtrasB.TabIndex = 45;
+            this.AtrasB.TabStop = false;
+            this.AtrasB.Click += new System.EventHandler(this.AtrasB_Click);
             // 
-            // buttonX3
+            // AdelanteB
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.buttonX3.FocusCuesEnabled = false;
-            this.buttonX3.Image = ((System.Drawing.Image)(resources.GetObject("buttonX3.Image")));
-            this.buttonX3.Location = new System.Drawing.Point(150, 141);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(25, 25);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 46;
-            this.buttonX3.TabStop = false;
+            this.AdelanteB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.AdelanteB.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.AdelanteB.FocusCuesEnabled = false;
+            this.AdelanteB.Image = ((System.Drawing.Image)(resources.GetObject("AdelanteB.Image")));
+            this.AdelanteB.Location = new System.Drawing.Point(150, 141);
+            this.AdelanteB.Name = "AdelanteB";
+            this.AdelanteB.Size = new System.Drawing.Size(25, 25);
+            this.AdelanteB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.AdelanteB.TabIndex = 46;
+            this.AdelanteB.TabStop = false;
+            this.AdelanteB.Click += new System.EventHandler(this.AdelanteB_Click);
             // 
-            // buttonX4
+            // FinalB
             // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.buttonX4.FocusCuesEnabled = false;
-            this.buttonX4.Image = ((System.Drawing.Image)(resources.GetObject("buttonX4.Image")));
-            this.buttonX4.Location = new System.Drawing.Point(181, 141);
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(25, 25);
-            this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX4.TabIndex = 47;
-            this.buttonX4.TabStop = false;
+            this.FinalB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.FinalB.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.FinalB.FocusCuesEnabled = false;
+            this.FinalB.Image = ((System.Drawing.Image)(resources.GetObject("FinalB.Image")));
+            this.FinalB.Location = new System.Drawing.Point(181, 141);
+            this.FinalB.Name = "FinalB";
+            this.FinalB.Size = new System.Drawing.Size(25, 25);
+            this.FinalB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.FinalB.TabIndex = 47;
+            this.FinalB.TabStop = false;
+            this.FinalB.Click += new System.EventHandler(this.FinalB_Click);
             // 
             // buttonX5
             // 
@@ -451,17 +435,18 @@
             this.buttonX5.TabStop = false;
             this.buttonX5.Text = "Lista de Asientos";
             // 
-            // comboBoxEx2
+            // TipoComprobanteC
             // 
-            this.comboBoxEx2.DisplayMember = "Text";
-            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx2.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxEx2.FormattingEnabled = true;
-            this.comboBoxEx2.ItemHeight = 14;
-            this.comboBoxEx2.Location = new System.Drawing.Point(3, 92);
-            this.comboBoxEx2.Name = "comboBoxEx2";
-            this.comboBoxEx2.Size = new System.Drawing.Size(158, 20);
-            this.comboBoxEx2.TabIndex = 49;
+            this.TipoComprobanteC.DisplayMember = "Text";
+            this.TipoComprobanteC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.TipoComprobanteC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TipoComprobanteC.ForeColor = System.Drawing.Color.Black;
+            this.TipoComprobanteC.FormattingEnabled = true;
+            this.TipoComprobanteC.ItemHeight = 15;
+            this.TipoComprobanteC.Location = new System.Drawing.Point(3, 92);
+            this.TipoComprobanteC.Name = "TipoComprobanteC";
+            this.TipoComprobanteC.Size = new System.Drawing.Size(158, 21);
+            this.TipoComprobanteC.TabIndex = 49;
             // 
             // label12
             // 
@@ -482,21 +467,21 @@
             this.radialMenuItem5.Name = "radialMenuItem5";
             this.radialMenuItem5.Text = "Reporte de Libro Diario";
             // 
-            // buttonX6
+            // OpcioneB
             // 
-            this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX6.FocusCuesEnabled = false;
-            this.buttonX6.Location = new System.Drawing.Point(6, 462);
-            this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(75, 25);
-            this.buttonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.OpcioneB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.OpcioneB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.OpcioneB.FocusCuesEnabled = false;
+            this.OpcioneB.Location = new System.Drawing.Point(6, 631);
+            this.OpcioneB.Name = "OpcioneB";
+            this.OpcioneB.Size = new System.Drawing.Size(75, 25);
+            this.OpcioneB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.OpcioneB.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1,
             this.buttonItem2});
-            this.buttonX6.TabIndex = 51;
-            this.buttonX6.TabStop = false;
-            this.buttonX6.Text = "Opciones";
+            this.OpcioneB.TabIndex = 51;
+            this.OpcioneB.TabStop = false;
+            this.OpcioneB.Text = "Opciones";
             // 
             // buttonItem1
             // 
@@ -510,21 +495,21 @@
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "Eliminar Asiento";
             // 
-            // buttonX7
+            // ReportesB
             // 
-            this.buttonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX7.FocusCuesEnabled = false;
-            this.buttonX7.Location = new System.Drawing.Point(100, 462);
-            this.buttonX7.Name = "buttonX7";
-            this.buttonX7.Size = new System.Drawing.Size(75, 25);
-            this.buttonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX7.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ReportesB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ReportesB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ReportesB.FocusCuesEnabled = false;
+            this.ReportesB.Location = new System.Drawing.Point(100, 631);
+            this.ReportesB.Name = "ReportesB";
+            this.ReportesB.Size = new System.Drawing.Size(75, 25);
+            this.ReportesB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ReportesB.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem3,
             this.buttonItem4});
-            this.buttonX7.TabIndex = 52;
-            this.buttonX7.TabStop = false;
-            this.buttonX7.Text = "PDF Reporte";
+            this.ReportesB.TabIndex = 52;
+            this.ReportesB.TabStop = false;
+            this.ReportesB.Text = "PDF Reporte";
             // 
             // buttonItem3
             // 
@@ -538,47 +523,85 @@
             this.buttonItem4.Name = "buttonItem4";
             this.buttonItem4.Text = "PDF Libro Diario";
             // 
+            // codigo
+            // 
+            this.codigo.Frozen = true;
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 145;
+            // 
+            // cuenta
+            // 
+            this.cuenta.Frozen = true;
+            this.cuenta.HeaderText = "Cuenta";
+            this.cuenta.Name = "cuenta";
+            this.cuenta.ReadOnly = true;
+            this.cuenta.Width = 220;
+            // 
+            // detalle
+            // 
+            this.detalle.Frozen = true;
+            this.detalle.HeaderText = "Detalle";
+            this.detalle.Name = "detalle";
+            this.detalle.ReadOnly = true;
+            this.detalle.Width = 300;
+            // 
+            // debe
+            // 
+            this.debe.Frozen = true;
+            this.debe.HeaderText = "Debe";
+            this.debe.Name = "debe";
+            this.debe.ReadOnly = true;
+            // 
+            // haber
+            // 
+            this.haber.Frozen = true;
+            this.haber.HeaderText = "Haber";
+            this.haber.Name = "haber";
+            this.haber.ReadOnly = true;
+            // 
             // FLibroDiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.buttonX7);
-            this.Controls.Add(this.buttonX6);
+            this.Controls.Add(this.ReportesB);
+            this.Controls.Add(this.OpcioneB);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBoxEx2);
+            this.Controls.Add(this.TipoComprobanteC);
             this.Controls.Add(this.buttonX5);
-            this.Controls.Add(this.buttonX4);
-            this.Controls.Add(this.buttonX3);
-            this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.FinalB);
+            this.Controls.Add(this.AdelanteB);
+            this.Controls.Add(this.AtrasB);
+            this.Controls.Add(this.PrimeroB);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.FechaFinD);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.FechaInicioD);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxX8);
-            this.Controls.Add(this.textBoxX7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TDebeT);
+            this.Controls.Add(this.THaberT);
+            this.Controls.Add(this.Data1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxX6);
-            this.Controls.Add(this.textBoxX5);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBoxEx1);
+            this.Controls.Add(this.UFVT);
+            this.Controls.Add(this.USDT);
+            this.Controls.Add(this.FechaComprobanteD);
+            this.Controls.Add(this.TipoAsientoC);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxX4);
-            this.Controls.Add(this.textBoxX3);
+            this.Controls.Add(this.NChequeT);
+            this.Controls.Add(this.GlosaT);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.RazonSocialT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.NComprobanteT);
             this.Name = "FLibroDiario";
             this.Size = new System.Drawing.Size(908, 659);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Data1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,48 +610,48 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private DevComponents.DotNetBar.Controls.TextBoxX TDebeT;
+        private DevComponents.DotNetBar.Controls.TextBoxX THaberT;
+        private System.Windows.Forms.DataGridView Data1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+        private DevComponents.DotNetBar.Controls.TextBoxX UFVT;
+        private DevComponents.DotNetBar.Controls.TextBoxX USDT;
+        private System.Windows.Forms.DateTimePicker FechaComprobanteD;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx TipoAsientoC;
         private System.Windows.Forms.Label label5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX NChequeT;
+        private DevComponents.DotNetBar.Controls.TextBoxX GlosaT;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX RazonSocialT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX NComprobanteT;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker FechaInicioD;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
+        private System.Windows.Forms.DateTimePicker FechaFinD;
+        private DevComponents.DotNetBar.ButtonX PrimeroB;
+        private DevComponents.DotNetBar.ButtonX AtrasB;
+        private DevComponents.DotNetBar.ButtonX AdelanteB;
+        private DevComponents.DotNetBar.ButtonX FinalB;
         private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx TipoComprobanteC;
         private System.Windows.Forms.Label label12;
         private DevComponents.DotNetBar.RadialMenuItem radialMenuItem4;
         private DevComponents.DotNetBar.RadialMenuItem radialMenuItem5;
-        private DevComponents.DotNetBar.ButtonX buttonX6;
+        private DevComponents.DotNetBar.ButtonX OpcioneB;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
-        private DevComponents.DotNetBar.ButtonX buttonX7;
+        private DevComponents.DotNetBar.ButtonX ReportesB;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn detalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn debe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn haber;
     }
 }

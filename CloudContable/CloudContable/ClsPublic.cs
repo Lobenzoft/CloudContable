@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -94,7 +95,9 @@ namespace CloudContable
             foreach (DataRow DtRow in CloudContable.plan_cuentas.Rows)
             {
                 string compare = String.Format("{0}  ||  {1}", DtRow[1], DtRow[2]);
-                if (compare.Equals(Texto))
+                string compare2 = String.Format("{0}", DtRow[1]);
+                string compare3 = "5";
+                if ((compare.Equals(Texto) || compare2.Equals(Texto))&&compare3.Equals(DtRow[4]))
                 {
                     Data[0] = DtRow[1].ToString();
                     Data[1] = DtRow[2].ToString();
@@ -193,7 +196,95 @@ namespace CloudContable
                     }
                 }
             }
+            while (VCamposNulos(data))
+            {
+                LimpiarDataGridSinCodigo(data);
+            }
         }
+        static bool VCamposNulos(DataGridView data)
+        {
+            int nulos = 0;
+            for (int fila = 0; fila < data.Rows.Count - 1; fila++)
+            {
+                if (data.Rows[fila].Cells[0].Value == null || data.Rows[fila].Cells[0].Value.ToString() == "")
+                {
+                    nulos++;
+                }
+            }
+            if (nulos > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static void SumarDebeHaberComprobante(DataGridView data,TextBox debe,TextBox haber,Label label)
+        {
+            double tdebe = 0.00, thaber = 0.00;
+            for (int fila = 0; fila < data.Rows.Count - 1; fila++)
+            {
+                try
+                {
+                    tdebe += Convert.ToDouble(data.Rows[fila].Cells[3].Value);
+                    thaber += Convert.ToDouble(data.Rows[fila].Cells[4].Value);
+                }
+                catch { }
+            }
+            debe.Text = tdebe.ToString("N2");
+            haber.Text = thaber.ToString("N2");
+            double diferencia = tdebe - thaber;
+            label.Text = diferencia.ToString("N2");
+            if (diferencia != 0)
+            {
+                label.ForeColor = Color.Red;
+            }
+            else
+            {
+                label.ForeColor = Color.Green;
+            }
+        }
+
+        public static void SumarDebeHaberComprobante(DataGridView data, TextBox debe, TextBox haber)
+        {
+            double tdebe = 0.00, thaber = 0.00;
+            for (int fila = 0; fila < data.Rows.Count; fila++)
+            {
+                try
+                {
+                    tdebe += Convert.ToDouble(data.Rows[fila].Cells[3].Value);
+                    thaber += Convert.ToDouble(data.Rows[fila].Cells[4].Value);
+                }
+                catch { }
+            }
+            debe.Text = tdebe.ToString("N2");
+            haber.Text = thaber.ToString("N2");
+            double diferencia = tdebe - thaber;
+        }
+
+        public static string ObtenerNombreCuenta(string codigo)
+        {
+            string cuenta = "";
+            foreach (DataRow DtRow in CloudContable.plan_cuentas.Rows)
+            {
+                string compare = String.Format("{0}", DtRow[1]);
+                if (compare.Equals(codigo))
+                {
+                    cuenta = String.Format("{0}", DtRow[2]);
+                    break;
+                }
+            }
+            return cuenta;
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

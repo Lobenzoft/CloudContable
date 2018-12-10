@@ -10,7 +10,8 @@ namespace CloudContable
     public partial class CloudContable : MetroForm
     {
         public static Panel ContenidoM, ContenidoC, ContenidoD;
-        public static string empresa,usuario;
+        //Info [id_emp]   [id_usuario]  [InicioGestion]  [FinGestion]
+        public static string[]Info=new string[] {"","","","",""};
         public static DataTable plan_cuentas; 
         public CloudContable()
         {

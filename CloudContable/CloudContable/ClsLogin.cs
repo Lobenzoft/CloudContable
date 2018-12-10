@@ -44,7 +44,8 @@ namespace CloudContable
                 {
                     data.DataSource = datatable;
                     data.Columns[0].Visible = false;
-                    data.Columns[3].HeaderText = "Gestión";
+                    data.Columns[3].HeaderText = "Inicio de Gestión";
+                    data.Columns[4].HeaderText = "Fin de Gestión";
                 }
             }
             else

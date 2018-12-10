@@ -17,13 +17,28 @@ namespace CloudContable
             InitializeComponent();
             clsComp = new ClsComprobante();
             clsComp.OpenDB();
-            NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.empresa);
+            NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.Info[0]);
             clsComp.CloseDB();
-            TipoComprobanteC.Items.Add("Diaro");
+            TipoComprobanteC.Items.Add("Diario");
             TipoComprobanteC.Items.Add("Ingreso");
             TipoComprobanteC.Items.Add("Egreso");
             TipoComprobanteC.SelectedIndex = 0;
+            FechaComprobanteD.Format = DateTimePickerFormat.Custom;
+            FechaComprobanteD.CustomFormat = "dd/MM/yyyy";
             SendKeys.Send("{TAB}");
+        }
+
+        void Clear()
+        {
+            clsComp.OpenDB();
+            NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.Info[0]);
+            clsComp.CloseDB();
+            NChequeT.Text = "";
+            RazonSocialT.Text = "";
+            GlosaT.Text = "";
+            TotalDebeT.Text = "0.00";
+            TotalHaberT.Text = "0.00";
+            Data1.Rows.Clear();
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -32,19 +47,14 @@ namespace CloudContable
             {
                 MessageBox.Show("f1");
             }
-
             if (keyData == Keys.F2)
             {
                 CloudContable.AgregarC(new FPlanCuentas(Data1,GlosaT.Text));
             }
             if (!this.Focused)
                 return base.ProcessCmdKey(ref msg, keyData);
-
             else if ((keyData != Keys.F1) & (keyData != Keys.F2))
                 return base.ProcessCmdKey(ref msg, keyData);
-
-            
-
             return true;
         }
 
@@ -54,7 +64,6 @@ namespace CloudContable
 
         private void Data1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            
             TextBox autoText = e.Control as TextBox;
             autoText.AutoCompleteMode = AutoCompleteMode.Suggest;
             autoText.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -123,7 +132,8 @@ namespace CloudContable
             if (Data1.Rows[Data1.CurrentCell.RowIndex].Cells[2].Value == null)Data1.Rows[Data1.CurrentCell.RowIndex].Cells[2].Value = GlosaT.Text;
             if (Data1.Rows[Data1.CurrentCell.RowIndex].Cells[3].Value == null)Data1.Rows[Data1.CurrentCell.RowIndex].Cells[3].Value = 0.00;
             if (Data1.Rows[Data1.CurrentCell.RowIndex].Cells[4].Value == null)Data1.Rows[Data1.CurrentCell.RowIndex].Cells[4].Value = 0.00;
-            ClsPublic.LimpiarDataGridSinCodigo(Data1);
+            //ClsPublic.LimpiarDataGridSinCodigo(Data1);
+            ClsPublic.SumarDebeHaberComprobante(Data1,TotalDebeT,TotalHaberT,DiferenciaL);
         }
 
         private void Data1_MouseClick(object sender, MouseEventArgs e)
@@ -204,14 +214,18 @@ namespace CloudContable
 
         private void CancelarB_Click(object sender, EventArgs e)
         {
-            clsComp.OpenDB();
-            if (!clsComp.ObtenerNComprobante(CloudContable.empresa).Equals(NComprobanteT.Text))
+            ClsPublic.LimpiarDataGridSinCodigo(Data1);
+            if (TotalDebeT.Text== TotalHaberT.Text && Data1.RowCount > 1)
             {
-                MessageBox.Show("El Número de Comprobante Se ha Actualizado");
+                clsComp.OpenDB();
+                if (!clsComp.ObtenerNComprobante(CloudContable.Info[0]).Equals(NComprobanteT.Text)) MessageBox.Show("El Número de Comprobante Se ha Actualizado");
+                clsComp.RegistrarComprobante(Data1, CloudContable.Info[0], CloudContable.Info[1], clsComp.ObtenerNComprobante(CloudContable.Info[0]), TipoComprobanteC.SelectedItem.ToString(), RazonSocialT.Text, GlosaT.Text, NChequeT.Text, FechaComprobanteD.Value.ToString("yyyy-MM-dd"), TasaUSDT.Text, TasaUFVT.Text);
+                NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.Info[0]);
+                clsComp.CloseDB();
+                Clear();
             }
-            clsComp.RegistrarComprobante(Data1,CloudContable.empresa, CloudContable.usuario, clsComp.ObtenerNComprobante(CloudContable.empresa), TipoComprobanteC.SelectedItem.ToString(), RazonSocialT.Text, GlosaT.Text, NChequeT.Text, FechaComprobanteD.Value.ToString("yyyy-MM-dd"),TasaUSDT.Text,TasaUFVT.Text);
-            NComprobanteT.Text = clsComp.ObtenerNComprobante(CloudContable.empresa);
-            clsComp.CloseDB();
+            else MessageBox.Show("No se Puede Registrar el Asiento\n-Revise los totales\n-Revise que la cantidad de cuentas utilizadas","Cloud Contable");
+            
         }
     }
 }
